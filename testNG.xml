@@ -1,0 +1,20 @@
+<suite name="TestNG Suite">
+    <parameters>
+        <parameter name="browser" value="chrome"/>
+        <parameter name="headless" value="false"/>
+        <parameter name="environment" value="qa"/>
+    </parameters>
+    <listeners>
+        <listener class-name="org.example.core.listeners.TestListener" />
+    </listeners>
+  <test name="TestNG Test">
+      <groups>
+          <run>
+              <include name="sanity1"/>
+          </run>
+      </groups>
+    <classes>
+      <class name="org.example.Sanity"/>
+    </classes>
+  </test>
+</suite>
